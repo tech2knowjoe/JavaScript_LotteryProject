@@ -1,0 +1,159 @@
+<html>
+
+<head>
+
+<style>
+
+	input {
+		margin: 10px;
+		height: 70px;
+		width: 50px;
+		font-size: 30px;
+		text-align: center;	
+	}
+
+		/* Chrome, Safari, Edge, Opera */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+  			-webkit-appearance: none;
+  			margin: 0;
+		}
+
+		/* Firefox */
+		input[type=number] {
+  			-moz-appearance: textfield;
+		}
+
+</style>	
+
+<script>
+</script>
+
+
+</head>
+
+<body>
+
+	<input type="number" id="text1">
+	
+	<input type="number" id="text2">
+	
+	<input type="number" id="text3">
+	
+	<input type="number" id="text4">
+	
+	<input type="number" id="text5">
+	
+	<input type="number" id="text6">
+	<br>
+
+
+	<button onclick="rand1()" id="btn1">Get Lucky Numbers</button>
+
+	<p id="n1"></p>
+
+	<p id="n2"></p> 
+
+	<p id="n3"></p>
+
+	<p id="n4"></p>
+
+	<p id="n5"></p>
+
+	<p id="n6"></p>
+
+<script>
+
+	function rand1() {
+
+
+		var str1 = document.getElementById("text1").value;
+		var str1a = parseInt(str1);
+
+		var str2 = document.getElementById("text2").value;
+		var str2a = parseInt(str2);
+
+		var str3 = document.getElementById("text3").value;
+		var str3a = parseInt(str3);
+
+		var str4 = document.getElementById("text4").value;
+		var str4a = parseInt(str4);
+
+		var str5 = document.getElementById("text5").value;
+		var str5a = parseInt(str5);
+
+		var str6 = document.getElementById("text6").value;
+		var str6a = parseInt(str6);
+
+
+	 	var myArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,
+				26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
+
+		var forDeletion = [str1a,str2a,str3a,str4a,str5a,str6a];
+
+
+
+
+	 	myArray = myArray.filter(item => !forDeletion.includes(item));
+	 	var newArray = myArray;
+	 	console.log(newArray);
+	 	var randomItem = newArray[Math.floor(Math.random()*myArray.length) ];
+	 	var num1 = randomItem;
+		//document.write(num1 + "<br>");
+		document.getElementById("n1").innerHTML = num1;
+
+		forDeletion2 = [num1]
+		newArray = newArray.filter(item => !forDeletion2.includes(item));
+	 	newArray2 = newArray;
+	 	console.log(newArray2);
+	 	var randomItem2 = newArray2[Math.floor(Math.random()*newArray2.length) ];
+	 	var num2 = randomItem2;
+		//document.write(num2 + "<br>");
+		document.getElementById("n2").innerHTML = num2;
+
+		forDeletion3 = [num2]
+	 	newArray2 = newArray2.filter(item => !forDeletion3.includes(item));
+	 	newArray3 = newArray2;
+	 	console.log(newArray3);
+	 	var randomItem3 = newArray3[Math.floor(Math.random()*newArray3.length) ];
+	 	var num3 = randomItem3;
+		//document.write(num3 + "<br>");
+		document.getElementById("n3").innerHTML = num3;
+
+	 	forDeletion4 = [num3]
+	 	newArray3 = newArray3.filter(item => !forDeletion4.includes(item));
+	 	newArray4 = newArray3;
+	 	console.log(newArray4);
+	 	var randomItem4 = newArray4[Math.floor(Math.random()*newArray4.length) ];
+	 	var num4 = randomItem4;
+		//document.write(num4 + "<br>");
+		document.getElementById("n4").innerHTML = num4;
+
+	 	forDeletion5 = [num4]
+	 	newArray4 = newArray4.filter(item => !forDeletion5.includes(item));
+	 	newArray5 = newArray4;
+	 	console.log(newArray5);
+	 	var randomItem5 = newArray5[Math.floor(Math.random()*newArray5.length) ];
+	 	var num5 = randomItem5;
+		//document.write(num5 + "<br>");
+		document.getElementById("n5").innerHTML = num5;
+
+	 	forDeletion6 = [num5]
+	 	newArray5 = newArray5.filter(item => !forDeletion6.includes(item));
+	 	newArray6 = newArray5;
+	 	console.log(newArray6);
+	 	var randomItem6 = newArray6[Math.floor(Math.random()*newArray6.length) ];
+	 	var num6 = randomItem6;
+		//document.write(num6 + "<br>");
+		document.getElementById("n6").innerHTML = num6;
+	 
+		}
+
+		//rand1() 
+
+
+
+</script>
+
+</body>
+</html>
